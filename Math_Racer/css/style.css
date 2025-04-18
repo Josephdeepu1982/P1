@@ -1,5 +1,227 @@
-*{
-  margin:0;
-  padding:0;
+
+
+/* Boiler Plate */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+/* to hide/show pages */
+.page{
+  /* display: none; */
+  padding: 40px 20px;
+}
+
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header (if used in future) */
+header {
+  padding: 10px;
+  background-color: #ff8c42;
+  color: white;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffa69e;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  border-bottom: 5px solid #ff686b;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #000;
+  text-shadow: 1px 1px 3px yellow;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #ff686b;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #ff686b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-bar button:hover {
+  background-color: #d94a4a;
+}
+
+/* Heading */
+#mathRacerHeading{
+  text-align: center;
+  margin: 30px 0;
+}
+
+#mathRacerHeading h1 {
+  font-size: 3rem;
+  color: #ff3c38;
+  text-shadow: 2px 2px #fff176;
+  /* animation: bounce 1.5s infinite alternate; */
+}
+
+#welcome-message, #get-ready  {
+  font-size: 3rem;
+  color: #ff3c38;
+  text-shadow: 2px 2px #fff176;
+}
+
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Car Image */
+.car-image {
+  width: 200px;
+  margin-bottom: 20px;
+  /* animation: zoomIn 1s ease-in-out; */
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Form Container */
+.instructions-container, .form-container {
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.form-container label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ffa69e;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+#instructions-page .instructions-container ul {
+  text-align: left;
+  margin: 20px auto;
+  display: inline-block;
+  text-align: left;
+}
+
+#landing-page button,
+#instructions-page button {
+  background-color: #ff686b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#landing-page button:hover, #instructions-page button:hover  {
+  background-color: #da2323;
+  transform: scale(1.05);
+}
+
+
+/* #game-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #ffa69e;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 3px solid #ff686b;
+} */
+
+#game-canvas {
+  background-color: #616464;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ff8c42;
+  border-radius: 12px;
+}
+
+#mathQuestionContainer {
+  width: 200px;
+  height:50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ccc;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+#mathQuestion {
+  color: blue;
+  text-align: center;
+  margin-top: 10px;
 }
