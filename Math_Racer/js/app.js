@@ -1,5 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
-let playerName = '';
+const playerName = '';
+
 /*-------------------------------- Variables --------------------------------*/
 
 /*------------------------ Cached Element References ------------------------*/
@@ -24,7 +25,7 @@ console.log(formattedName)
 return;
 };
 
-//generate random math questions
+//generate random math questions & answers
 
 function mathChallenges () {
 const a = Math.floor(Math.random()*10);
@@ -75,6 +76,9 @@ const car = {
   height: 100,
   speed : 10,
 }
+
+const carImage = new Image();
+carImage.src = './Resources/Car.png';
 
 document.addEventListener("keydown",(event) => {
   if(event.key === "ArrowLeft"){
